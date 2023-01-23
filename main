@@ -1,0 +1,13 @@
+#include <iostream>
+
+template <typename T>
+struct Box3d
+{
+   T
+};
+
+int main()
+{
+
+return 0;
+}
