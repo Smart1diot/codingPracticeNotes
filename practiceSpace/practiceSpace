@@ -1,0 +1,18 @@
+#include <iostream>
+
+struct Box
+{
+    int corner1{};
+    int corner2{};
+    int corner3{};
+ };
+
+void comparison()
+{
+}
+
+int main()
+{
+Box
+return 0;
+}
