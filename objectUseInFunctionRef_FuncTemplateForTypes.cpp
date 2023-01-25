@@ -10,7 +10,7 @@ struct Triad
 };
 
 template <typename T> //template 
-void print(Triad<T>& p) //Function call that uses object reference as a parameter
+void print(Triad<T>& p) //Function call that uses object reference as a parameter dont foreget it!, can also edit object members this way 
 {
 	std::cout << '[' << p.first << ", " << p.second << ", " << p.third << ']' << '\n';
 }
