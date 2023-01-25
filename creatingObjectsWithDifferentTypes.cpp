@@ -26,12 +26,12 @@ constexpr std::string_view getMonsterTypeString(MonsterType type)
 {
 	switch (type)
 	{
-	case MonsterType::ogre: return "Ogre";
-	case MonsterType::dragon: return "Dragon";
-	case MonsterType::orc: return "Orc";
+	case MonsterType::ogre: 	return "Ogre";
+	case MonsterType::dragon: 	return "Dragon";
+	case MonsterType::orc: 		return "Orc";
 	case MonsterType::giant_spider: return "Giant Spider";
-	case MonsterType::slime: return "Slime";
-	default: "Unknown";
+	case MonsterType::slime: 	return "Slime";
+	default: 				"Unknown";
 
 	}
 }
@@ -46,10 +46,10 @@ void printMonster(const Monster& monster) // Function that just prints the detai
 
 int main()
 {
-	Monster ogre{ MonsterType::ogre, "Shrek", 145 }; // Creating a monster object named ogre with these parameters for its members
-	Monster giantSpider{ MonsterType::giant_spider, "Quelaag", 500 }; // Creating a monster obkect named giantSpider with these parameters for its members
+	Monster ogre{ MonsterType::ogre, "Shrek", 145 };		// Creating a monster object named ogre with these parameters for its members
+	Monster giantSpider{ MonsterType::giant_spider, "Quelaag", 500 };// Creating a monster obkect named giantSpider with these parameters for its members
 
-	printMonster(ogre); // Function printMonster gets called with ogre
+	printMonster(ogre); 	// Function printMonster gets called with ogre
 	printMonster(giantSpider); // Function printMonster gets called with giantSpider
 
 	return 0;
