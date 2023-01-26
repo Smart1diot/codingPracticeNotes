@@ -36,11 +36,11 @@ constexpr std::string_view getMonsterTypeString(MonsterType type)
 	}
 }
 
-// Print our monsters stats
+// Print our monsters info
 void printMonster(const Monster& monster) // Function that just prints the details for the object monsters info
 {
-	std::cout << "This " << getMonsterTypeString(monster.type) <<
-		" is named" << monster.stringName <<
+	std::cout << "This " << getMonsterTypeString(monster.type) << //Remember this one is a function because we need the getMonsterTypeString() function-
+		" is named" << monster.stringName <<			//to print a enum name i.e. MonsterType.
 		" and has " << monster.health << '\n';
 }
 
