@@ -1,30 +1,20 @@
 #include <iostream>
 
-struct Box
+struct Bool
 {
-    int length{};
-    int width{};
-    int height{};
- };
- 
- enum Location
- {
-    seattle,
-    spokane,
-    snoqualmie,
- };
-
-double determinePrice()
-{
-    switch()
-    case seattle:       std::cout << 11.98;
-    case spokane:       std::cout << 13.31;
-    case snoqualmie:    std::cout << 12.28; 
-}
+    bool x{true}
+};
 
 int main()
 {
-Box firstBox{11, 11, 11};
+Bool bool{};
+    while(Bool::x)
+    {
+        std::out << "We will only print out one time then cease to exist...."
+        Bool::x = false;
+    }
+
+std::cout << "Now that the reign of Bool is over, real int main()s rise up gamers!" << '\n';
 
 return 0;
 }
