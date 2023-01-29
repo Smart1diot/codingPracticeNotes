@@ -1,20 +1,18 @@
 #include <iostream>
 
-struct Bool
+void fourLoopsEnd()
 {
-    bool x{true}
-};
+    for(int i{1}; i <= 3; ++i)
+    {
+    std::cout << "We will print 3 times" << '\n';
+    }
+    std::cout << "We print after the loop ends within the function and will soon be destroyed after this function ends." << '\n';
+}
 
 int main()
 {
-Bool bool{};
-    while(Bool::x)
-    {
-        std::out << "We will only print out one time then cease to exist...."
-        Bool::x = false;
-    }
 
-std::cout << "Now that the reign of Bool is over, real int main()s rise up gamers!" << '\n';
+fourLoopsEnd();
 
-return 0;
-}
+    return 0;
+}    
