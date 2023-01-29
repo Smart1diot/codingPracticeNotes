@@ -1,18 +1,24 @@
 #include <iostream>
 
-void fourLoopsEnd()
+struct Container
 {
-    for(int i{1}; i <= 3; ++i)
-    {
-    std::cout << "We will print 3 times" << '\n';
-    }
-    std::cout << "We print after the loop ends within the function and will soon be destroyed after this function ends." << '\n';
-}
+    int length{};
+    int width{};
+    int height{};
+    int weight{};
+};
+
+Container backPack[4]{};
 
 int main()
 {
+    backPack[0].length = 21;
+    backPack[1].width = 15;
+    backPack[2].height = 11;
+    backPack[3].weight = 21;
 
-fourLoopsEnd();
+    std::cout << "Dimentional weight of our package is: " << (backPack[0].length * backPack[1].width * backPack[2].height) / 166 << '\n';
+    std::cout << "Actual weight of our package is: " << backPack[3].weight << '\n';
 
     return 0;
-}    
+}
