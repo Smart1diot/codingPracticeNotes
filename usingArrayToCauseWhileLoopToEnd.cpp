@@ -6,7 +6,7 @@ struct Rectangle
 {
 	int length{};
 	int width{};
-	double sex{};
+	double cool{};
 	bool swap{};
 };
 
@@ -17,7 +17,7 @@ int main()
 	
 	rec[0].length = 1;
 	rec[1].width = 2;
-	rec[2].sex = 3.6;
+	rec[2].cool = 3.6;
 	rec[3].swap = true; //Declaring true to bool array member for rectangle object "rec[4]"
 
 	while (true)
