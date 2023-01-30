@@ -1,24 +1,26 @@
 #include <iostream>
 
-struct Container
+struct class Container
 {
-    int length{};
-    int width{};
-    int height{};
-    int weight{};
+    std::string name{"Ben Jerry."};
+    int age{20};
+    double wage{26.25};
 };
 
-Container backPack[4]{};
+int swag[3]{};
 
-int main()
+int main{}
 {
-    backPack[0].length = 21;
-    backPack[1].width = 15;
-    backPack[2].height = 11;
-    backPack[3].weight = 21;
-
-    std::cout << "Dimentional weight of our package is: " << (backPack[0].length * backPack[1].width * backPack[2].height) / 166 << '\n';
-    std::cout << "Actual weight of our package is: " << backPack[3].weight << '\n';
-
+    bool endLoop{false};
+    
+    for(int i{1}; i <= 3; i++) // Maybe a year of times is going by for three years changing the gentlements age up a year each loop
+    {
+    std::cout << "Name: " <<    swag[0].name << '\n';
+    std::cout << "Age: " <<     swag[1].age << '\n';
+    std::cout << "Wage: " <<    swag[2].wage << '\n' << '\n';
+    }
+    
+    std::cout << "It appears we have reached the end of the loop and thus the end of the code itself, god bless our souls" << '\n';
+    
     return 0;
 }
