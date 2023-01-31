@@ -1,26 +1,22 @@
 #include <iostream>
+#include <string>
 
-struct class Container
+struct Container
 {
-    std::string name{"Ben Jerry."};
-    int age{20};
-    double wage{26.25};
+    std::string text{};
+    int num{};
+    double deci{};
 };
 
-int swag[3]{};
-
-int main{}
+int main()
 {
-    bool endLoop{false};
+    Container box[3]{};
     
-    for(int i{1}; i <= 3; i++) // Maybe a year of times is going by for three years changing the gentlements age up a year each loop
-    {
-    std::cout << "Name: " <<    swag[0].name << '\n';
-    std::cout << "Age: " <<     swag[1].age << '\n';
-    std::cout << "Wage: " <<    swag[2].wage << '\n' << '\n';
-    }
+    box[0].text = {"Hello, World!"};
+    box[1].num = {50};
+    box[2].deci = {2.4};
     
-    std::cout << "It appears we have reached the end of the loop and thus the end of the code itself, god bless our souls" << '\n';
+    std::cout << box[0].text << ' ' << box[1].num << ' ' << box[2].deci << '\n';
     
     return 0;
 }
