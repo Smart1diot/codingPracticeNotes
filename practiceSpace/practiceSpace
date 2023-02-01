@@ -1,22 +1,31 @@
 #include <iostream>
 #include <string>
 
-struct Container
+struct Person 
 {
-    std::string text{};
-    int num{};
-    double deci{};
+    std::string name{};
+    std::string birthPlace{};
+    int age{};
+    int fingersPerHand{};
+    int totalNumOfFingers{};
 };
 
 int main()
 {
-    Container box[3]{};
-    
-    box[0].text = {"Hello, World!"};
-    box[1].num = {50};
-    box[2].deci = {2.4};
-    
-    std::cout << box[0].text << ' ' << box[1].num << ' ' << box[2].deci << '\n';
-    
-    return 0;
+    Person character[5]{};
+    character[0].name = { "Carlos Perez" };
+    character[1].birthPlace = { "Mexico" };
+    character[2].age = { 26 };
+    character[3].fingersPerHand = { 5 };
+    character[4].totalNumOfFingers = { (character[3].fingersPerHand) *2 };
+
+    for (character[2].age; character[2].age <= 100; character[2].age++)
+    {
+        std::cout << "Name: " << character[0].name << '\n';
+        std::cout << "Birth Place: " << character[1].birthPlace << '\n';
+        std::cout << "Age: " << character[2].age << '\n';
+        std::cout << "Fingers Per Hand: " << character[3].fingersPerHand << '\n';
+        std::cout << "Total Number of Fingers: " << character[4].totalNumOfFingers << '\n' << '\n';
+    }
+        return 0;
 }
