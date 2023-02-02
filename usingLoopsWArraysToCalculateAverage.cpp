@@ -5,7 +5,7 @@
 int main()
 {
 	constexpr int scores[]{ 84,92,76,81,56 }; //set the scores for five students?
-	const int numStudents{ sizeof(scores) / sizeof(scores[0]) }; // This somehow finds the numbers of members inside of the score[]array
+	const int numStudents{ sizeof(scores) / sizeof(scores[0]) }; // preC++17 This somehow finds the numbers of members inside of the score[]array 
 
 	std::cout << "sizeof(scores): " << sizeof(scores) << '\n';
 	std::cout << "sizeof(scores[0]): " << sizeof(scores[0]) << '\n';
