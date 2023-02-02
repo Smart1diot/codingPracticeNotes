@@ -1,31 +1,8 @@
 #include <iostream>
-#include <string>
-
-struct Person 
-{
-    std::string name{};
-    std::string birthPlace{};
-    int age{};
-    int fingersPerHand{};
-    int totalNumOfFingers{};
-};
 
 int main()
 {
-    Person character[5]{};
-    character[0].name = { "Carlos Perez" };
-    character[1].birthPlace = { "Mexico" };
-    character[2].age = { 26 };
-    character[3].fingersPerHand = { 5 };
-    character[4].totalNumOfFingers = { (character[3].fingersPerHand) *2 };
-
-    for (character[2].age; character[2].age <= 100; character[2].age++)
-    {
-        std::cout << "Name: " << character[0].name << '\n';
-        std::cout << "Birth Place: " << character[1].birthPlace << '\n';
-        std::cout << "Age: " << character[2].age << '\n';
-        std::cout << "Fingers Per Hand: " << character[3].fingersPerHand << '\n';
-        std::cout << "Total Number of Fingers: " << character[4].totalNumOfFingers << '\n' << '\n';
-    }
-        return 0;
+    double temperature[365]{};
+    
+    return 0;
 }
