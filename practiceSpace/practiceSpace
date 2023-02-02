@@ -1,8 +1,26 @@
 #include <iostream>
 
+namespace animal
+{
+    enum Animal
+    {
+        chicken,
+        dog,
+        cat,
+        elephant,
+        duck,
+        snake,
+        
+        numofanimals,
+    };
+
+};
+
 int main()
 {
-    double temperature[365]{};
+    int animals[animal::Animal::numofanimals]{2,4,4,4,2,0,};
     
+    std::cout << animals[animal::Animal::elephant] << '\n'; // Only one mistake today we forgot to place a C in std::cout.... i fucking need coffee
+
     return 0;
 }
