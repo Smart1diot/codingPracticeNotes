@@ -1,26 +1,18 @@
+// 
+
 #include <iostream>
-
-namespace animal
-{
-    enum Animal
-    {
-        chicken,
-        dog,
-        cat,
-        elephant,
-        duck,
-        snake,
-        
-        numofanimals,
-    };
-
-};
+#include <algorithm>
 
 int main()
 {
-    int animals[animal::Animal::numofanimals]{2,4,4,4,2,0,};
+    int array[]{54,36,15,94,26,82,31,48,62,57,93};
     
-    std::cout << animals[animal::Animal::elephant] << '\n'; // Only one mistake today we forgot to place a C in std::cout.... i fucking need coffee
+    std::sort(std::begin(array), std::end(array));
+    
+    for(int i{0}; i < sizeof(array) / sizeof(array[0]); ++i)
+    
+    std::cout << array[i] << ' ';
+
 
     return 0;
 }
