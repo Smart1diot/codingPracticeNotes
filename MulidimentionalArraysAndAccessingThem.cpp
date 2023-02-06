@@ -37,6 +37,8 @@ int main()
 	std::cout << '\n';
 
 	std::cout << array2[2][1] << '\n'; // manually access the value behind the multidimentional array and print
+	
+	int array4[5][4][3]{}; //array4 has 3 dimentions its best to initialize with 0 and add the values later
 
 	return 0;
 }
