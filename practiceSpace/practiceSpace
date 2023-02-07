@@ -1,3 +1,5 @@
+//2/7/23 Morning practice consisted of a single multidimentional array and we access one value from each row
+
 #include <iostream>
 
 int main()
@@ -9,9 +11,9 @@ int main()
         {11,12,13,14,15},
     };
     
-    std::cout << array[0][3] << '\n';
-    std::cout << array[1][1] << '\n';
-    std::cout << array[2][4] << '\n';
+    std::cout << array[0][3] << '\n'; //4
+    std::cout << array[1][1] << '\n'; //7
+    std::cout << array[2][4] << '\n'; //15
     
     return 0;
 }
