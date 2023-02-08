@@ -1,19 +1,46 @@
-//2/7/23 Morning practice consisted of a single multidimentional array and we access one value from each row
+// 2/8/2023
 
 #include <iostream>
 
+struct Package
+{
+    int zipCode{};
+    char city[255]{};
+    char state[255]{};
+    int length{};
+    int width{};
+    int height{};
+};
+
 int main()
 {
-    int array[][5]
-    {
-        {1,2,3,4,5},
-        {6,7,8,9,10},
-        {11,12,13,14,15},
-    };
-    
-    std::cout << array[0][3] << '\n'; //4
-    std::cout << array[1][1] << '\n'; //7
-    std::cout << array[2][4] << '\n'; //15
-    
+Package box[]{};
+
+int length{(box / box[0]) - 1 };
+
+std::cout << "Enter Zip Code: ";
+std::cout >> cin >> box[0];
+
+std::cout << "Enter City: ";
+std::cout >> cin >> box[1];
+
+std::cout << "Enter State: ";
+std::cout >> cin >> box[2];
+
+std::cout << "Enter Length: ";
+std::cout >> cin >> box[3];
+
+std::cout << "Enter Width: ";
+std::cout >> cin >> box[4];
+
+std::cout << "Enter Height: ";
+std::cout >> cin >> box[5];
+
+for (int i{0}; i < length; ++i}
+{
+    std::cout << box[i] << '\n';
+}
+
+
     return 0;
 }
