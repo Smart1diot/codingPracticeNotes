@@ -1,46 +1,27 @@
-// 2/8/2023
+// 2/11/2023
 
 #include <iostream>
+#include <string>
 
-struct Package
+struct Container
 {
-    int zipCode{};
-    char city[255]{};
-    char state[255]{};
-    int length{};
-    int width{};
-    int height{};
+    std::string text{};
+    int num{};
+    double dou{};
 };
 
 int main()
 {
-Package box[]{};
-
-int length{(box / box[0]) - 1 };
-
-std::cout << "Enter Zip Code: ";
-std::cout >> cin >> box[0];
-
-std::cout << "Enter City: ";
-std::cout >> cin >> box[1];
-
-std::cout << "Enter State: ";
-std::cout >> cin >> box[2];
-
-std::cout << "Enter Length: ";
-std::cout >> cin >> box[3];
-
-std::cout << "Enter Width: ";
-std::cout >> cin >> box[4];
-
-std::cout << "Enter Height: ";
-std::cout >> cin >> box[5];
-
-for (int i{0}; i < length; ++i}
-{
-    std::cout << box[i] << '\n';
-}
-
+    Container box[]
+    {
+        "swag",
+        35,
+        44.88,
+    };
+    
+    std::cout << "text: " << box[0] << '\n';
+    std::cout << "num: " << box[1] << '\n';
+    std::cout << "double: " << box[2] << '\n';
 
     return 0;
 }
