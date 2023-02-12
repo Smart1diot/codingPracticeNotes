@@ -1,27 +1,44 @@
-// 2/11/2023
-
 #include <iostream>
+#include <string_view>
+#include <iterator>
+#include <cstring>
 #include <string>
-
-struct Container
-{
-    std::string text{};
-    int num{};
-    double dou{};
-};
 
 int main()
 {
-    Container box[]
-    {
-        "swag",
-        35,
-        44.88,
-    };
-    
-    std::cout << "text: " << box[0] << '\n';
-    std::cout << "num: " << box[1] << '\n';
-    std::cout << "double: " << box[2] << '\n';
+    std::string_view str{ "Trains are fast!" };
+
+    std::cout << str.length() << '\n';
+    std::cout << str.substr(0, str.find(' ')) << '\n';
+    std::cout << (str == "Trains are fast!") << '\n';
+
+    std::cout << str.starts_with("Boots") << '\n';
+    std::cout << str.ends_with("fast!") << '\n';
+
+    std::cout << str << '\n';
+
+    std::cout << '\n' << '\n';
+
+    char vowels[]{ 'a', 'e', 'i', 'o', 'u' };
+
+    std::string_view vow{ vowels, std::size(vowels) };
+
+    std::cout << vow << '\n';
+
+    std::cout << '\n' << '\n';
+
+    std::string_view sv{ "balloon" };
+
+    sv.remove_suffix(3);
+
+    auto szNullterminated{ ball.c_str() };
+
+    std::cout << ball << " has " << std::strlen(szNullterminated) << " letter(s)" << '\n';
+
+    std::cout << '\n' << '\n';
+
+    void doSomthing(const std::string&);
+    void doSomthing(std::string_view);
 
     return 0;
 }
