@@ -1,44 +1,25 @@
 #include <iostream>
-#include <string_view>
-#include <iterator>
-#include <cstring>
 #include <string>
+
+
+struct Balls
+{
+	std::string text{};
+	int age{};
+	double cash{};
+};
 
 int main()
 {
-    std::string_view str{ "Trains are fast!" };
+	Balls text{ "swag", 18, 44.88}; //So far best form of storing multiple data forms
 
-    std::cout << str.length() << '\n';
-    std::cout << str.substr(0, str.find(' ')) << '\n';
-    std::cout << (str == "Trains are fast!") << '\n';
+	Balls text1[]{ "swag",18,44.99 }; //array that stores multiples data forms but accesing text isnt that easys
 
-    std::cout << str.starts_with("Boots") << '\n';
-    std::cout << str.ends_with("fast!") << '\n';
+	std::string text2[]{ "swag", "cum", "bootyhole" }; //So far best form of storing strings
 
-    std::cout << str << '\n';
+	std::cout << text.text << ' ' << text.age << ' ' << text.cash << '\n';
+	//std::cout << text1[0] << ' ' << text1[1] << ' ' << text1[2] << '\n';
+	std::cout << text2[0] << ' ' << text2[1] << ' ' << text2[2] << '\n';
 
-    std::cout << '\n' << '\n';
-
-    char vowels[]{ 'a', 'e', 'i', 'o', 'u' };
-
-    std::string_view vow{ vowels, std::size(vowels) };
-
-    std::cout << vow << '\n';
-
-    std::cout << '\n' << '\n';
-
-    std::string_view sv{ "balloon" };
-
-    sv.remove_suffix(3);
-
-    auto szNullterminated{ ball.c_str() };
-
-    std::cout << ball << " has " << std::strlen(szNullterminated) << " letter(s)" << '\n';
-
-    std::cout << '\n' << '\n';
-
-    void doSomthing(const std::string&);
-    void doSomthing(std::string_view);
-
-    return 0;
+	return 0;
 }
