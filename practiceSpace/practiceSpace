@@ -1,7 +1,7 @@
-2/13/2023 notes on storing and accessing multiple data forms 
+// 2/14/2023
+
 #include <iostream>
 #include <string>
-
 
 struct Balls
 {
@@ -10,17 +10,30 @@ struct Balls
 	double cash{};
 };
 
+
 int main()
 {
-	Balls text{ "swag", 18, 44.88}; //So far best form of storing multiple data forms
+	Balls text1[]
+	{
+		{"swag", 25, 44.88 },
+		{"dog", 35, 88.99},
+		{"cat", 45, 22.22},
+	};
 
-	Balls text1[]{ "swag",18,44.99 }; //array that stores multiples data forms but accesing text isnt that easys
+	int textItems{ sizeof(text1) / sizeof(text1[0]) };
 
-	std::string text2[]{ "swag", "cum", "bootyhole" }; //So far best form of storing strings
+	for (int i{ 0 }; i < textItems - 1; ++i)
+	{
+		for (int j{ i + 1 }; j < textItems - 1; ++j)
+		{
+			if (text1[j] == "dog")
+			{
+				std::cout << "dog";
+			}
+		}
+	}
 
-	std::cout << text.text << ' ' << text.age << ' ' << text.cash << '\n';
-	//std::cout << text1[0] << ' ' << text1[1] << ' ' << text1[2] << '\n';
-	std::cout << text2[0] << ' ' << text2[1] << ' ' << text2[2] << '\n';
-
+	
+	
 	return 0;
 }
