@@ -2,7 +2,7 @@
 
 int main()
 {
-  const int penisbeta{ 1000000000 };
+  	const int penisbeta{ 1000000000 };
 	const size_t penis{ 1000000000 };
 	std::cout << penisbeta << '\n';
 	std::cout << "penisbeta size: " << sizeof(penisbeta) << '\n'; //prints 4
