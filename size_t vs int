@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main()
+{
+  const int penisbeta{ 1000000000 };
+	const size_t penis{ 1000000000 };
+	std::cout << penisbeta << '\n';
+	std::cout << "penisbeta size: " << sizeof(penisbeta) << '\n'; //prints 4
+	std::cout << penis << '\n';
+	std::cout << "penis size: " << sizeof(penis) << '\n'; // prints 8
+
+
+  return 0;
+}
