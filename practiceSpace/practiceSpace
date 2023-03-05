@@ -1,16 +1,45 @@
-//2/24/2023
+// 3/5/2023
+
 #include <iostream>
+#include <string_view>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+struct Student
+{
+	std::string name{};
+	int grade{};
+};
+
+bool compareGrade(Student a, Student b)
+{
+	return a.grade > b.grade;
+}
 
 int main()
 {
-	std::array<int, 10> container{10,20,30,40,50,60,70,80,90,95};
+	int numberOfStudents{};
+	std::cout << "How many students do you wish to enter: ";
+	std::cin >> numberOfStudents; // num of students
 	
-	for (size_t member, container)
+	std::vector<Student> classList{}; // vector of number of students
+	classList.resize(numberOfStudents); // we set the number of members in vector
+
+	for (auto& element : classList)
 	{
-		std::cout << member << ' ';
+		std::cin >> element.name;
+		std::cin >> element.grade;
 	}
-	
 	std::cout << '\n';
-	
+
+	std::sort(classList.begin(), classList.end(), compareGrade);
+
+	std::cout << classList[0].name << ' ' << classList[0].grade << '\n';
+	std::cout << classList[1].name << ' ' << classList[1].grade << '\n';
+	std::cout << classList[2].name << ' ' << classList[2].grade << '\n';
+	std::cout << classList[3].name << ' ' << classList[3].grade << '\n';
+	std::cout << classList[4].name << ' ' << classList[4].grade << '\n';
+
 	return 0;
-};
+}
