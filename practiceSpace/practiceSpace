@@ -1,45 +1,37 @@
-// 3/5/2023
-
 #include <iostream>
-#include <string_view>
-#include <vector>
-#include <string>
-#include <algorithm>
 
-struct Student
+class Info
 {
-	std::string name{};
-	int grade{};
+public: 
+	int one{};
+	int two{};
+	int three{};
+
+	void print()
+	{
+		std::cout << one << ' ' << two << ' ' << three << '\n';
+	}
+
+	int sum()
+	{
+		return one + two + three;
+	}
 };
 
-bool compareGrade(Student a, Student b)
+int sumFunc(Info* container<int>& ds)
 {
-	return a.grade > b.grade;
+	return (ds.one + ds.two + ds.three);
 }
 
 int main()
 {
-	int numberOfStudents{};
-	std::cout << "How many students do you wish to enter: ";
-	std::cin >> numberOfStudents; // num of students
-	
-	std::vector<Student> classList{}; // vector of number of students
-	classList.resize(numberOfStudents); // we set the number of members in vector
+	Info container{ 10, 20, 30 };
 
-	for (auto& element : classList)
-	{
-		std::cin >> element.name;
-		std::cin >> element.grade;
-	}
-	std::cout << '\n';
+	container.print();
 
-	std::sort(classList.begin(), classList.end(), compareGrade);
+	std::cout << container.sum() << '\n';
 
-	std::cout << classList[0].name << ' ' << classList[0].grade << '\n';
-	std::cout << classList[1].name << ' ' << classList[1].grade << '\n';
-	std::cout << classList[2].name << ' ' << classList[2].grade << '\n';
-	std::cout << classList[3].name << ' ' << classList[3].grade << '\n';
-	std::cout << classList[4].name << ' ' << classList[4].grade << '\n';
+	std::cout << sumFunc(container) << '\n';
 
 	return 0;
 }
