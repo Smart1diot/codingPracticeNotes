@@ -1,37 +1,41 @@
 #include <iostream>
+#include <array>
+#include <string>
+#include <string_view>
 
-class Info
+enum MonsterType
 {
-public: 
-	int one{};
-	int two{};
-	int three{};
+	smallGoblin,
+	mediumGoblin,
+	bigGoblin,
 
-	void print()
-	{
-		std::cout << one << ' ' << two << ' ' << three << '\n';
-	}
+	smallLizard,
+	mediumLizard,
+	bigLizard,
 
-	int sum()
-	{
-		return one + two + three;
-	}
+	smallFairy,
+	mediumFairy,
+	bigFairiy,
+
+	totalEnemies,
 };
 
-int sumFunc(Info* container<int>& ds)
+class Monster
 {
-	return (ds.one + ds.two + ds.three);
-}
+private:
+	std::string monsterName;
+	int health;
+	
+public:
+	
+
+};
+
+
 
 int main()
 {
-	Info container{ 10, 20, 30 };
-
-	container.print();
-
-	std::cout << container.sum() << '\n';
-
-	std::cout << sumFunc(container) << '\n';
+	Monster smallGoblin;
 
 	return 0;
 }
