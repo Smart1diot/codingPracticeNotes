@@ -7,7 +7,7 @@ private:
 	int m_value{};
 
 public:
-	Calc& add(int value) { m_value += value; return *this; }
+	Calc& add(int value) { m_value += value; return *this; } //*this pointer returning the very class object itself 
 	Calc& sub(int value) { m_value -= value; return *this; }
 	Calc& mult(int value) { m_value *= value; return *this; }
 
