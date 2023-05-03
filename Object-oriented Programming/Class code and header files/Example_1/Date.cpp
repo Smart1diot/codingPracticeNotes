@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Date.h"
 
-Date::Date() : m_month{ 1 }, m_day{ 1 }, m_year{ 1 } { std::cout << "Setting Up Default Date..." << '\n'; }
+Date::Date() : m_month{ 1 }, m_day{ 1 }, m_year{ 1 } { std::cout << "Setting Up Default Date..." << '\n'; } // Set up default in header file
 
 Date::Date(int month, int day, int year)
 :	m_month{ month },
