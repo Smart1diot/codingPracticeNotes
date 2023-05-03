@@ -7,7 +7,7 @@ private:
 	int m_year{};
 
 public:
-	Date();
+	Date(); // Should define default in header
 
 	Date(int month, int day, int year);
 
