@@ -1,41 +1,30 @@
 #include <iostream>
-#include <array>
 #include <string>
 #include <string_view>
 
-enum MonsterType
-{
-	smallGoblin,
-	mediumGoblin,
-	bigGoblin,
-
-	smallLizard,
-	mediumLizard,
-	bigLizard,
-
-	smallFairy,
-	mediumFairy,
-	bigFairiy,
-
-	totalEnemies,
-};
-
-class Monster
+class SwagYolo
 {
 private:
-	std::string monsterName;
-	int health;
-	
+	std::string foo{};
+
 public:
-	
+	SwagYolo()
+		: foo{ "hello world" } {
+		std::cout << "setting up hello world..." << '\n';
+	}
+
+	void print()
+	{
+		std::cout << foo << '\n';
+	}
 
 };
-
-
 
 int main()
 {
-	Monster smallGoblin;
+	SwagYolo foo{};
+
+	foo.print();
 
 	return 0;
 }
