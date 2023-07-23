@@ -25,5 +25,8 @@ int main()
 	std::cout << rBase.getName2(2) << '\n';
 	std::cout << rBase.getName3(3) << '\n';
 
+//Use the virtual keyword on virtual functions in a base class.
+//Use the override specifier (but not the virtual keyword) on override functions in derived classes. This includes virtual destructors.
+	
 	return 0;
 }//
